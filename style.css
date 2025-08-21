@@ -319,3 +319,9 @@ p{ margin:0 0 1em; color:var(--muted); font-size:1.05rem; line-height:1.6; }
   .ct-header .ct-main-navigation,
   .ct-header .ct-header-tools{ display:none !important; }
 }
+/* HERO micro-proof helper */
+.micro-proof {
+  font-size: .95rem;
+  opacity: .85;
+  margin-top: .5rem;
+}
