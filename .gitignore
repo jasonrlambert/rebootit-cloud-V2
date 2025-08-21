@@ -1,0 +1,37 @@
+# ==========================
+# RebootIT Cloud V2 Project
+# Only track custom theme files
+# ==========================
+
+# Ignore everything by default
+*
+
+# ==========================
+# Allow only these files/folders
+# ==========================
+
+# Gitignore rules
+!.gitignore
+
+# Theme root files (custom code)
+!home-v2.php
+!functions.php
+!header.php
+!footer.php
+!index.php
+!style.css
+
+# Custom JS
+!js/
+!js/*.js
+
+# ==========================
+# Still ignore unwanted files
+# ==========================
+.vscode/
+sftp.json
+*.log
+*.bak
+*.tmp
+*.sql
+*.zip
