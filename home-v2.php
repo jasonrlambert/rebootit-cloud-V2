@@ -10,138 +10,98 @@ get_header();
 
 <main id="home-v2" class="homev2" role="main">
 
-  <!-- 1) HERO — Bait & Hook -->
-  <section id="hero" class="section hero fade-up" aria-label="Hero">
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="stack gap-l">
-          <h1 class="hero__title">
-            MSPs don’t need more tools.<br>
-            They need a <span class="accent">smarter operating system</span>.
-          </h1>
-          <p class="hero__subtitle">
-            RebootIT.cloud helps MSPs scale recurring revenue, reduce chaos, and signal strategic value — without adding headcount.
-          </p>
-          <div class="row gap-m">
-            <a class="btn btn-primary" href="<?php echo esc_url( home_url( '/reboot-session' ) ); ?>">Book a Free Reboot Session</a>
-            <a class="btn btn-ghost" href="#framework">See the 5-part framework</a>
-          </div>
-          <ul class="hero__bullets">
-            <li>Less firefighting, more forward motion</li>
-            <li>Offer design clients actually understand</li>
-            <li>Post-win plays that earn expansion</li>
-          </ul>
-        </div>
+<!-- HERO: Cloud outline with geometric overlays -->
+<section class="hero-geo" role="banner">
+  <!-- Geometric background art (pure SVG, no images) -->
+  <div class="hero-geo__artwrap" aria-hidden="true">
+    <svg class="hero-geo__art" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-opacity="0.18"/>
+          <stop offset="100%" stop-opacity="0.04"/>
+        </linearGradient>
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
 
-        <div class="hero__cardwrap" aria-hidden="false">
-          <article class="reboot-card kpi" aria-label="Signals That Matter">
-            <header class="kpi__head">Signals That Matter</header>
-            <div class="kpi__row" role="list">
-              <div class="kpi__item" role="listitem">
-                <span class="kpi__value">+27%</span>
-                <span class="kpi__label">MRR / seat</span>
-              </div>
-              <div class="kpi__item" role="listitem">
-                <span class="kpi__value">-31%</span>
-                <span class="kpi__label">Ticket noise</span>
-              </div>
-              <div class="kpi__item" role="listitem">
-                <span class="kpi__value">2.4×</span>
-                <span class="kpi__label">Project attach</span>
-              </div>
-            </div>
-            <footer class="kpi__foot">Outcomes from modernized offer + post-win cadence.</footer>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Subtle grid -->
+      <g class="hero-geo__grid">
+        <!-- verticals -->
+        <g opacity="0.25">
+          <line x1="180" y1="0" x2="180" y2="720" />
+          <line x1="360" y1="0" x2="360" y2="720" />
+          <line x1="540" y1="0" x2="540" y2="720" />
+          <line x1="720" y1="0" x2="720" y2="720" />
+          <line x1="900" y1="0" x2="900" y2="720" />
+          <line x1="1080" y1="0" x2="1080" y2="720" />
+          <line x1="1260" y1="0" x2="1260" y2="720" />
+        </g>
+        <!-- horizontals -->
+        <g opacity="0.25">
+          <line x1="0" y1="120" x2="1440" y2="120" />
+          <line x1="0" y1="240" x2="1440" y2="240" />
+          <line x1="0" y1="360" x2="1440" y2="360" />
+          <line x1="0" y1="480" x2="1440" y2="480" />
+          <line x1="0" y1="600" x2="1440" y2="600" />
+        </g>
+      </g>
 
-  <!-- 2) PROBLEM / TRUTH -->
-  <section id="problem" class="section fade-up" aria-label="Problem">
-    <div class="container">
-      <div class="stack gap-m center">
-        <h2 class="section__title">The gap isn’t effort — it’s <span class="accent">operating model</span>.</h2>
-        <p class="section__lede">Most MSPs sell labor disguised as “managed services.” Buyers want clarity, outcomes, and cadence — not tickets, tools, and time.</p>
-      </div>
-      <div class="grid grid-3 gap-l">
-        <article class="reboot-card">
-          <h3 class="card__title">Fuzzy offer</h3>
-          <p>Bundles read like a parts list. No visible value ladder or next step.</p>
-        </article>
-        <article class="reboot-card">
-          <h3 class="card__title">Random wins</h3>
-          <p>Deals close, but handoffs drift. No rhythm to prove strategy or earn the next project.</p>
-        </article>
-        <article class="reboot-card">
-          <h3 class="card__title">Tool sprawl</h3>
-          <p>More platforms, more overhead. Margins sag while the team burns out.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+      <!-- Concentric dashed rings (movement) -->
+      <g class="hero-geo__rings">
+        <circle cx="980" cy="240" r="180" class="ring"/>
+        <circle cx="980" cy="240" r="260" class="ring"/>
+      </g>
 
-  <!-- 3) PROMISE / POSITIONING -->
-  <section id="promise" class="section section--invert fade-up" aria-label="Promise">
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="stack gap-m">
-          <h2 class="section__title">A modern MSP that grows on purpose.</h2>
-          <ul class="checklist">
-            <li>Outcome-based offer with tiers that ladder value</li>
-            <li>Pricing logic that protects margin and signals quality</li>
-            <li>Post-win playbook that earns expansion</li>
-            <li>Operating cadence your team can actually run</li>
-          </ul>
-        </div>
-        <article class="reboot-card">
-          <h3 class="card__title">How it shows up</h3>
-          <p>Clear packaging, smart service design, and leadership rhythms that compound. Clients feel the difference in month one.</p>
-          <div class="row gap-s">
-            <a class="btn btn-primary" href="#framework">Explore the framework</a>
-            <a class="btn btn-ghost" href="#resources">Get working templates</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+      <!-- Floating triangles / nodes -->
+      <g class="hero-geo__shapes">
+        <polygon points="220,160 255,120 290,160" class="tri tri--1"/>
+        <polygon points="1260,520 1295,470 1330,520" class="tri tri--2"/>
+        <circle cx="360" cy="520" r="5" class="node"/>
+        <circle cx="1140" cy="160" r="5" class="node"/>
+        <circle cx="780" cy="580" r="5" class="node"/>
+      </g>
 
-  <!-- 4) FRAMEWORK -->
-  <section id="framework" class="section fade-up" aria-label="Framework">
-    <div class="container">
-      <div class="stack gap-m center">
-        <h2 class="section__title">The Reboot Framework — 5 Parts</h2>
-        <p class="section__lede">Simple to understand. Strong enough to scale.</p>
-      </div>
-      <div class="grid grid-5 grid-scroll" role="list">
-        <article class="reboot-step" role="listitem">
-          <span class="badge" aria-hidden="true">1</span>
-          <h3>Model</h3>
-          <p>Define tiers, promises, and boundaries. Kill scope creep.</p>
-        </article>
-        <article class="reboot-step" role="listitem">
-          <span class="badge" aria-hidden="true">2</span>
-          <h3>Offer</h3>
-          <p>Package outcomes, not parts. Clarify the path to “next.”</p>
-        </article>
-        <article class="reboot-step" role="listitem">
-          <span class="badge" aria-hidden="true">3</span>
-          <h3>Pricing</h3>
-          <p>Align price with risk, complexity, and value — not hours.</p>
-        </article>
-        <article class="reboot-step" role="listitem">
-          <span class="badge" aria-hidden="true">4</span>
-          <h3>Plays</h3>
-          <p>Post-win cadence: kickoff → 30/60/90 → QBR/Strategy.</p>
-        </article>
-        <article class="reboot-step" role="listitem">
-          <span class="badge" aria-hidden="true">5</span>
-          <h3>Operating Rhythm</h3>
-          <p>Weekly leadership, metrics, and enablement that stick.</p>
-        </article>
-      </div>
+      <!-- CLOUD OUTLINE + subtle power icon -->
+      <g class="hero-geo__cloud" filter="url(#softGlow)">
+        <!-- Cloud outline (animated stroke) -->
+        <path class="cloud-path"
+          d="M480,430
+             C430,430 390,390 390,340
+             C390,300 415,265 452,252
+             C470,180 540,130 630,130
+             C710,130 780,175 805,235
+             C815,233 826,232 838,232
+             C913,232 973,290 973,362
+             C973,435 913,493 838,493
+             L480,493
+             C480,493 480,430 480,430 Z" />
+
+        <!-- Power icon inside cloud -->
+        <g class="power" transform="translate(0,12)">
+          <circle cx="700" cy="330" r="68" class="power-ring"/>
+          <line x1="700" y1="260" x2="700" y2="316" class="power-stem"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Text/CTA -->
+  <div class="hero-geo__content container">
+    <span class="eyebrow">Modernize, don’t just migrate</span>
+    <h1>MSPs don’t need another tool — they need a smarter playbook.</h1>
+    <p class="subhead">RebootIT.cloud helps MSPs align strategy, AI, and cloud to business outcomes — with frameworks that scale.</p>
+    <div class="hero-geo__cta">
+      <a class="btn btn--primary" href="/thesis">Explore the Thesis</a>
+      <a class="btn btn--ghost" href="/reboot-session">Book a Reboot Session</a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- 5) PROOF / SOCIAL -->
   <section id="proof" class="section fade-up" aria-label="Proof">
