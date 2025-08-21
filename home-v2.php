@@ -9,88 +9,64 @@ get_header();
 
 <main id="home-v2" class="homev2" role="main">
 
-  <!-- HERO — Cloud Outline + Geometric Overlays -->
-  <section class="hero-geo" role="banner">
-    <!-- Background art (self-styled SVG so it never renders solid black) -->
-    <div class="hero-geo__artwrap" aria-hidden="true">
-      <svg class="hero-geo__art" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-opacity="0.18"/>
-            <stop offset="100%" stop-opacity="0.04"/>
-          </linearGradient>
-          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="6" result="blur"/>
-            <feMerge>
-              <feMergeNode in="blur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-          <style>
-            .grid line{stroke:url(#gridFade);stroke-width:1}
-            .ring{fill:none;stroke:#2B6FFF;stroke-opacity:.18;stroke-width:2;stroke-dasharray:8 10}
-            .tri{fill:none;stroke:#69A1FF;stroke-opacity:.35;stroke-width:2}
-            .node{fill:#2B6FFF;opacity:.55}
-            .cloud-path{fill:none;stroke:#2B6FFF;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
-            .power-ring{fill:none;stroke:#2B6FFF;stroke-width:4;opacity:.55}
-            .power-stem{stroke:#2B6FFF;stroke-width:6;stroke-linecap:round}
-          </style>
-        </defs>
+<section class="hero-geo hero-min" role="banner">
+  <div class="hero-geo__artwrap" aria-hidden="true">
+    <svg viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="gf" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-opacity=".12"/><stop offset="100%" stop-opacity=".03"/>
+        </linearGradient>
+        <style>
+          .g line{stroke:url(#gf);stroke-width:1}
+          .ring{fill:none;stroke:#3E7BFF;stroke-opacity:.14;stroke-width:1.5;stroke-dasharray:6 10}
+          .tri{fill:none;stroke:#8AB4FF;stroke-opacity:.35;stroke-width:1.5}
+          .cloud{fill:none;stroke:#2B6FFF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+          .pwr-r{fill:none;stroke:#2B6FFF;stroke-width:3;opacity:.5}
+          .pwr-s{stroke:#2B6FFF;stroke-width:4;stroke-linecap:round}
+        </style>
+      </defs>
+      <g class="g" opacity=".25">
+        <line x1="160" y1="0" x2="160" y2="520"/><line x1="320" y1="0" x2="320" y2="520"/>
+        <line x1="480" y1="0" x2="480" y2="520"/><line x1="640" y1="0" x2="640" y2="520"/>
+        <line x1="800" y1="0" x2="800" y2="520"/><line x1="960" y1="0" x2="960" y2="520"/>
+        <line x1="1120" y1="0" x2="1120" y2="520"/><line x1="1280" y1="0" x2="1280" y2="520"/>
+        <line x1="0" y1="120" x2="1440" y2="120"/><line x1="0" y1="240" x2="1440" y2="240"/>
+        <line x1="0" y1="360" x2="1440" y2="360"/><line x1="0" y1="480" x2="1440" y2="480"/>
+      </g>
+      <g>
+        <circle cx="1060" cy="140" r="140" class="ring"/>
+        <circle cx="1060" cy="140" r="200" class="ring"/>
+      </g>
+      <g>
+        <polygon points="210,110 240,70 270,110" class="tri"/>
+        <polygon points="1260,410 1290,365 1320,410" class="tri"/>
+      </g>
+      <g transform="translate(0,-10)">
+        <path class="cloud" d="M460,300 C420,300 390,270 390,235
+             C390,205 410,178 442,168
+             C462,115 520,80 596,80
+             C662,80 720,114 740,162
+             C748,160 757,159 768,159
+             C828,159 876,205 876,263
+             C876,321 828,367 768,367
+             L460,367 Z"/>
+        <circle cx="650" cy="245" r="52" class="pwr-r"/>
+        <line x1="650" y1="198" x2="650" y2="230" class="pwr-s"/>
+      </g>
+    </svg>
+  </div>
 
-        <!-- Grid -->
-        <g class="grid">
-          <g opacity="0.25">
-            <line x1="180" y1="0" x2="180" y2="720" />
-            <line x1="360" y1="0" x2="360" y2="720" />
-            <line x1="540" y1="0" x2="540" y2="720" />
-            <line x1="720" y1="0" x2="720" y2="720" />
-            <line x1="900" y1="0" x2="900" y2="720" />
-            <line x1="1080" y1="0" x2="1080" y2="720" />
-            <line x1="1260" y1="0" x2="1260" y2="720" />
-          </g>
-          <g opacity="0.25">
-            <line x1="0" y1="120" x2="1440" y2="120" />
-            <line x1="0" y1="240" x2="1440" y2="240" />
-            <line x1="0" y1="360" x2="1440" y2="360" />
-            <line x1="0" y1="480" x2="1440" y2="480" />
-            <line x1="0" y1="600" x2="1440" y2="600" />
-          </g>
-        </g>
-
-        <!-- Rings -->
-        <g>
-          <circle cx="980" cy="240" r="180" class="ring"/>
-          <circle cx="980" cy="240" r="260" class="ring"/>
-        </g>
-
-        <!-- Triangles + Nodes -->
-        <g>
-          <polygon points="220,160 255,120 290,160" class="tri"/>
-          <polygon points="1260,520 1295,470 1330,520" class="tri"/>
-          <circle cx="360" cy="520" r="5" class="node"/>
-          <circle cx="1140" cy="160" r="5" class="node"/>
-          <circle cx="780" cy="580" r="5" class="node"/>
-        </g>
-
-        <!-- Cloud outline + power icon -->
-        <g filter="url(#softGlow)">
-          <path class="cloud-path" d="M480,430
-             C430,430 390,390 390,340
-             C390,300 415,265 452,252
-             C470,180 540,130 630,130
-             C710,130 780,175 805,235
-             C815,233 826,232 838,232
-             C913,232 973,290 973,362
-             C973,435 913,493 838,493
-             L480,493
-             C480,493 480,430 480,430 Z" />
-          <g transform="translate(0,12)">
-            <circle cx="700" cy="330" r="68" class="power-ring"/>
-            <line x1="700" y1="260" x2="700" y2="316" class="power-stem"/>
-          </g>
-        </g>
-      </svg>
+  <div class="hero-geo__content container hero-min__content">
+    <span class="eyebrow">Modernize, not just migrate</span>
+    <h1>MSPs don’t need another tool — they need a smarter playbook.</h1>
+    <p class="subhead">Strategy, AI, and cloud aligned to outcomes — with rhythms your team can run.</p>
+    <div class="hero-geo__cta">
+      <a class="btn btn--primary" href="<?php echo esc_url( home_url('/thesis') ); ?>">Explore the Thesis</a>
+      <a class="btn btn--ghost" href="<?php echo esc_url( home_url('/reboot-session') ); ?>">Book a Reboot Session</a>
     </div>
+  </div>
+</section>
+
 
     <!-- Hero text/CTA -->
     <div class="hero-geo__content container">

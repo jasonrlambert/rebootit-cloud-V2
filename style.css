@@ -535,3 +535,16 @@ p{ margin:0 0 1em; color:var(--muted); font-size:1.05rem; line-height:1.6; }
   .hero-geo .eyebrow{ font-size:.78rem; }
   .hero-geo .subhead{ max-width:65ch; }
 }
+.hero-geo{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(#fff,#F7FAFF);}
+.hero-geo__artwrap{position:absolute;inset:0;pointer-events:none}
+.hero-geo__artwrap svg{width:100%;height:100%;display:block}
+.hero-geo__content.container{position:relative;z-index:2;width:min(1080px,92vw);margin-inline:auto}
+.eyebrow{display:inline-block;font-weight:700;text-transform:uppercase;font-size:.85rem;padding:.35rem .6rem;border:2px solid #2B6FFF;border-radius:999px;background:#fff;margin-bottom:12px}
+.hero-geo h1{font-size:clamp(28px,4.2vw,48px);line-height:1.1;margin:6px 0 10px;font-weight:800;color:#0C1633}
+.subhead{font-size:clamp(16px,1.6vw,20px);color:#334;max-width:58ch;margin:0 0 24px}
+.hero-geo__cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 1.2rem;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn--primary{background:#2B6FFF;color:#fff;border-color:#2B6FFF}
+.btn--ghost{background:#fff;color:#0C1633;border-color:#2B6FFF}
+.hero-min{min-height:clamp(520px,70vh,660px);display:grid;place-items:center}
+.hero-min__content{text-align:center;margin-top:2rem}
