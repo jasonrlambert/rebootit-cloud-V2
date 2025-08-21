@@ -17,7 +17,7 @@ get_header();
         <div class="stack gap-l">
           <h1 class="hero__title">
             MSPs don’t need more tools.<br>
-            They need a <span class="accent">smarter operating systems</span>.
+            They need a <span class="accent">smarter operating system</span>.
           </h1>
           <p class="hero__subtitle">
             RebootIT.cloud helps MSPs scale recurring revenue, reduce chaos, and signal strategic value — without adding headcount.
